@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Header from './Components/Header.jsx';
+import HeaderResponsive from './Components/HeaderResponsive';
 
 
 
@@ -7,7 +9,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      Hi Ausind website
+      <HeaderResponsive />
     </div>
   );
 }
