@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function () {
+export default function Home() {
     return (
         <div>
-            I am the home container
+        I am home page of Ausind I will make the form
         </div>
+            
     )
 }

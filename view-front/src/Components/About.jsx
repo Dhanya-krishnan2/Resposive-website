@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function () {
+export default function  About() {
     return (
         <div>
-            I am the about session
+            I am the about of AusInd
         </div>
     )
 }

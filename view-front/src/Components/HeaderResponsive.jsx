@@ -1,6 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import { BrowserRouter, NavLink, Switch, Route, useLocation } from 'react-router-dom';
 import './Header.css';
+import About from "./About";
+import Home from "./Home";
+import Contact from "./Contact";
 
 function HeaderResponsive() {
 
@@ -65,22 +68,23 @@ function AllRoutes({ hideMenu }) {
     </Switch>
   );
 }
-
-function Home() {
-  return (
-    <h1>This is home page</h1>
-  );
-}
-
-function About() {
-  return (
-    <h1>This is about page</h1>
-  );
-}
-
-function Contact() {
-  return (
-    <h1>This is contact page</h1>
-  );
-}
+// this is place where we calling home
+// function Home() {
+//   return (
+//     <h1>This is home page</h1>
+//   );
+// }
+// here is the function where we use About
+// function About() {
+//   return (
+//     <h1>This is about page</h1>
+//   );
+// }
+// Here is the Contact information
+// function Contact() {
+//   return (
+//     <h1>This is contact page</h1>
+//   );
+// }
+// WE can add as many as links in the menu when needs arrives
 export default HeaderResponsive;
