@@ -12,6 +12,7 @@
     margin: auto;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0.2), 0 5px 0 rgba(0, 0, 0.24);
     padding: 10px;
+    float: right;
 }
 .register-form{
     display: flex;

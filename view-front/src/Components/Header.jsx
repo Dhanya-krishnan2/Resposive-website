@@ -1,11 +1,12 @@
 import React, { useRef, useEffect} from 'react';
-import { BrowserRouter, NavLink, Switch, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, NavLink, Link, Switch, Route, useLocation } from 'react-router-dom';
 import './Header.css';
 import About from './About';
 import Home from './Home';
 import Frequently from './Faq';
 import Services from './Services';
 import Contact from './Contact';
+import Logo from "./logo.PNG"
 // here we using useref hooks to collapse the navmenu
 export default function Header() {
     const navBarLinks = useRef(null);
@@ -24,7 +25,9 @@ export default function Header() {
     <BrowserRouter>
        <nav className="navbar">
        <div className="navbar-container">
-       <a href="#" className='brand-title'> Ausind Solar</a>
+       <Link to="/" className="navbar-logo">
+        <img src={Logo} alt="" srcset=""/>
+       </Link>
        <button onClick={(e) => {handleNavbarButton(e);}} className='navbar-toggler'> 
         <span className='nabar-toggle-icon'></span>
        </button>

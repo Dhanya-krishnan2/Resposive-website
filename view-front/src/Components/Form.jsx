@@ -5,7 +5,8 @@ export default function Form() {
         
         fullName: "",
         email: "",
-        phoneNumber: ""
+        phoneNumber: "",
+        address: "",
 
     });
     // here we are declaring a hook to show whether the submitting quote is successful or not
@@ -23,12 +24,16 @@ export default function Form() {
     const handlePhoneNumberInputChange = (event) => {
         setValues({...values, phoneNumber: event.target.value})
     }
+    // setting it for address
+    const handleAddressInputChange = (event) => {
+        setValues({ ...values, address: event.targer.value})
+    }
     // for the validation to happen setting up the hook
       const [valid, setValidation ] = useState(false);
     // setting up events for submit button
     const handleSubmit = (event) => {
         event.preventDefault();
-        if(values.fullName && values.email && values.phoneNumber ){
+        if(values.fullName && values.email && values.phoneNumber && values.address){
             setValidation(true);
         }
         setSubmitted(true);
@@ -65,7 +70,15 @@ export default function Form() {
                name="phoneNumber"
                value={values.phoneNumber}
         />
-        { submitted && !values.phoneNumber ?<span> Please enter your phone number</span>: null}
+        {submitted && !values.email ? <span> Please enter you phonenumber address</span> : null}
+        <input className="form-field"
+               onChange={handleAddressInputChange}
+               placeholder="
+               address"
+               name="address"
+               value={values.address}
+        />
+        { submitted && !values.address ?<span> Please enter your phone number</span>: null}
         
         
         <button class="form-field" type="submit">
