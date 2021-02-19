@@ -67,8 +67,9 @@ export default function Form() {
         />
         { submitted && !values.phoneNumber ?<span> Please enter your phone number</span>: null}
         
-        <button className="form-container" type="submit">
-           GET MY FREE QUOTE
+        
+        <button class="form-field" type="submit">
+          GET MY FREE QUOTE
         </button>
         </form>
             
