@@ -42,6 +42,10 @@ export default function Form() {
 
     return (
         <div className="form-container">
+             <div className="heading-color">
+             <h1> Get A Free Quote Today </h1>
+             <h3>  Schdule A Free Consultation Now</h3>
+             </div>
         <form className="register-form" onSubmit={handleSubmit}>
         {submitted && valid ? <div className="success-message"> Success! Thank you for registering with us</div> :null}
          
